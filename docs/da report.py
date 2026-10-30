@@ -463,9 +463,22 @@ def create_report():
         bold_prefix="• Liquidity Multiplier Formulation: "
     )
 
+    add_h2("5.3 Authentic Dataset Citation")
     add_p(
-        "Citation: Andrea A, Viswanadham Venkata Mrinalini, and Dr. S. Vigneshwari (Faculty). 'Stanford SNAP Financial Transaction Networks for ClearPay Algorithmic Validation: Bitcoin OTC, Bitcoin Alpha, and Ethereum Stablecoin Clearing Graphs.' Stanford Network Analysis Project (SNAP), Stanford University, 2026. Available at: https://snap.stanford.edu/data",
-        bold_prefix="Dataset Citation: "
+        "Because ClearPay evaluates performance on established open-access scientific benchmark networks created by Stanford University researchers rather than an internally generated dataset, external Zenodo DOI registration is not applicable. The official primary citations for the datasets used in this work are:",
+        bold_prefix="Dataset Attribution Note: "
+    )
+    add_bullet(
+        " S. Kumar, F. Spezzano, V. S. Subrahmanian, and C. Faloutsos, 'Edge weight prediction in weighted signed networks,' in 2016 IEEE 16th International Conference on Data Mining (ICDM), Barcelona, Spain, 2016, pp. 221-230. DOI: 10.1109/ICDM.2016.0033. (Official publication for the Stanford SNAP Bitcoin-OTC and Bitcoin-Alpha networks).",
+        bold_prefix="Primary Dataset Research Citation: "
+    )
+    add_bullet(
+        " J. Leskovec and A. Krevl, 'SNAP Datasets: Stanford Large Network Dataset Collection,' Stanford University, 2014. Available: https://snap.stanford.edu/data",
+        bold_prefix="Dataset Repository Citation: "
+    )
+    add_p(
+        "Experimental data pipeline adaptation, liquidity stress parameterization (alpha = 0.10 to 1.20), and benchmark execution conducted by: Andrea A (24BCE1142), Viswanadham Venkata Mrinalini (24BCE1400), under the academic supervision of Dr. S. Vigneshwari (Faculty), School of Computer Science and Engineering, VIT Chennai.",
+        bold_prefix="Project Experimental Evaluation: "
     )
 
     # =========================================================================
