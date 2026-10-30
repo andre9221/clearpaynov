@@ -25,10 +25,13 @@ if _src_dir not in sys.path:
     sys.path.insert(0, _src_dir)
 
 try:
-    from common.liquidity import removal_heuristic, net_debit_positions
+    from src.common.liquidity import removal_heuristic, net_debit_positions
 except ImportError:
-    removal_heuristic = None
-    net_debit_positions = None
+    try:
+        from common.liquidity import removal_heuristic, net_debit_positions  # type: ignore
+    except ImportError:
+        removal_heuristic = None
+        net_debit_positions = None
 
 st.set_page_config(page_title="ClearPay", layout="wide")
 
